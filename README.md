@@ -13,9 +13,7 @@ The project uses the youtube_transcript_api to fetch raw captions from a provide
 
 2. Text Processing & Chunking
 Since Transformer models have a maximum token limit, the script:
-
 Cleans and joins individual transcript fragments into a single text body.
-
 Chunks the text into segments of 1,000 characters to ensure the model processes the entire video without crashing or losing data.
 
 3. Summarization Pipeline
@@ -24,17 +22,14 @@ Each text chunk is passed through a summarization pipeline. The BART-Large-CNN m
 4. Results
 The final output is a concatenated string of summarized text, significantly reducing the original word count while retaining the core message.
 
-Getting Started
-Prerequisites
 You will need to install the following libraries:
 Bash
 pip install transformers youtube_transcript_api
+
 Usage
 
 Open the notebook in Google Colab.
-
 Provide a YouTube URL.
-
 Run the cells to extract the transcript and generate your summary.
 
 Key Features
